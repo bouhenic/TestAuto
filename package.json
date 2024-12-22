@@ -1,0 +1,20 @@
+{
+  "name": "testauto",
+  "version": "1.0.0",
+  "description": "Démonstration des tests unitaires avec Node.js",
+  "main": "src/calculator.js",
+  "scripts": {
+    "test": "jest",
+    "test:coverage": "jest --coverage"
+  },
+  "keywords": [
+    "testing",
+    "unit-tests",
+    "nodejs"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
