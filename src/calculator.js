@@ -17,6 +17,10 @@ class Calculator {
         }
         return a / b;
     }
+
+    power(a, b) {
+        return Math.pow(a, b);
+    }
 }
 
 module.exports = Calculator;
