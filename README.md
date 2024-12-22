@@ -2,6 +2,9 @@
 
 Ce projet est une démonstration simple de tests unitaires en Node.js utilisant Jest comme framework de test.
 
+## Statut des Tests
+![Tests Status](https://github.com/bouhenic/testauto/actions/workflows/tests.yml/badge.svg)
+
 ## Prérequis
 
 - Node.js (version 16.x ou supérieure)
@@ -42,6 +45,13 @@ Pour lancer les tests avec la couverture de code :
 npm run test:coverage
 ```
 
+## Pipeline CI/CD
+
+Un workflow GitHub Actions est configuré pour :
+- Exécuter les tests automatiquement à chaque push et pull request
+- Tester sur différentes versions de Node.js (16.x, 18.x, 20.x)
+- Générer un rapport de couverture de code
+
 ## Description des Fichiers
 
 ### calculator.js
@@ -70,6 +80,5 @@ Tests unitaires vérifiant :
 
 - Ajout de nouvelles opérations mathématiques
 - Amélioration de la couverture des tests
-- Ajout d'un pipeline CI/CD
 - Intégration d'un linter (ESLint)
 - Documentation API (JSDoc)
