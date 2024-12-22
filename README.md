@@ -7,7 +7,7 @@ Ce projet est une démonstration simple de tests unitaires en Node.js utilisant 
 
 ## Prérequis
 
-- Node.js (version 16.x ou supérieure)
+- Node.js (version 18.x ou supérieure)
 - npm (installé avec Node.js)
 
 ## Installation
@@ -23,18 +23,9 @@ cd testauto
 npm install
 ```
 
-## Structure du Projet
+## Scripts disponibles
 
-```
-├── src/
-│   └── calculator.js     # Code source de la calculatrice
-├── tests/
-│   └── calculator.test.js # Tests unitaires
-└── package.json          # Configuration du projet
-```
-
-## Exécution des Tests
-
+### Tests
 Pour lancer les tests :
 ```bash
 npm test
@@ -45,12 +36,49 @@ Pour lancer les tests avec la couverture de code :
 npm run test:coverage
 ```
 
+### Linting
+Pour vérifier le style du code :
+```bash
+npm run lint
+```
+
+Pour corriger automatiquement les erreurs de style :
+```bash
+npm run lint:fix
+```
+
+## Configuration ESLint
+
+Le projet utilise ESLint avec les règles suivantes :
+- Indentation de 4 espaces
+- Guillemets simples
+- Points-virgules obligatoires
+- Style de ligne Unix
+- Avertissements pour les variables non utilisées
+- Avertissements pour console.log
+- Égalité stricte obligatoire (===)
+- Accolades obligatoires
+
+## Structure du Projet
+
+```
+├── src/
+│   └── calculator.js     # Code source de la calculatrice
+├── tests/
+│   └── calculator.test.js # Tests unitaires
+├── .eslintrc.json        # Configuration ESLint
+├── package.json          # Configuration du projet
+└── .github/
+    └── workflows/         # Workflows CI/CD
+```
+
 ## Pipeline CI/CD
 
-Un workflow GitHub Actions est configuré pour :
-- Exécuter les tests automatiquement à chaque push et pull request
-- Tester sur différentes versions de Node.js (16.x, 18.x, 20.x)
+Le workflow GitHub Actions est configuré pour :
+- Exécuter le linting du code
+- Lancer les tests sur différentes versions de Node.js (18.x, 20.x)
 - Générer un rapport de couverture de code
+- Sauvegarder les rapports comme artifacts
 
 ## Description des Fichiers
 
@@ -72,13 +100,14 @@ Tests unitaires vérifiant :
 
 1. Forkez le projet
 2. Créez une branche pour votre fonctionnalité
-3. Commitez vos changements
-4. Poussez vers la branche
-5. Créez une Pull Request
+3. Assurez-vous que les tests et le linting passent
+4. Commitez vos changements
+5. Poussez vers la branche
+6. Créez une Pull Request
 
 ## Extensions Possibles
 
 - Ajout de nouvelles opérations mathématiques
 - Amélioration de la couverture des tests
-- Intégration d'un linter (ESLint)
+- Intégration de tests d'intégration
 - Documentation API (JSDoc)
