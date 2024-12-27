@@ -96,15 +96,6 @@ Tests unitaires vérifiant :
 - Multiplication avec gestion du zéro
 - Division avec gestion de la division par zéro
 
-## Contribution
-
-1. Forkez le projet
-2. Créez une branche pour votre fonctionnalité
-3. Assurez-vous que les tests et le linting passent
-4. Commitez vos changements
-5. Poussez vers la branche
-6. Créez une Pull Request
-
 ## Extensions Possibles
 
 - Ajout de nouvelles opérations mathématiques
